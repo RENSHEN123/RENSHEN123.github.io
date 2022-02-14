@@ -195,7 +195,8 @@
     <script>
         //var Map=position map;
         
-        let a =Number(localStorage.sitename);
+            let a =Number(localStorage.getItem("key");
+                          
         function restart(){
             a=0;
             document.getElementById("yue").innerHTML=("米币余额 : "+ a);
@@ -205,7 +206,7 @@
             if(a=="Miler0301"){
                 alert("welcome!")
                 document.getElementById("chong").style.display="block";
-                let x=Number(document.cookie);
+                let x=Number(localStorage.getItem("key"));
                 document.getElementById("yue").innerHTML=("米币余额 : "+ x);
             }
             else{
@@ -222,9 +223,7 @@
                 if (r==true)
                 {
                     
-                    localStorage.sitename = a;
-                    
-                    document.getElementById("yue").innerHTML=("米币余额 : "+ a);
+                    localStorage.setItem("key",a);
                     alert("保存成功！")
                 }
                 else
