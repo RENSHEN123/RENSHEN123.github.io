@@ -195,7 +195,7 @@
     <script>
         //var Map=position map;
         
-        let a =Number(document.cookie);;
+        let a =Number(localStorage.sitename);
         function restart(){
             a=0;
             document.getElementById("yue").innerHTML=("米币余额 : "+ a);
@@ -222,7 +222,7 @@
                 if (r==true)
                 {
                     
-                    document.cookie=a;
+                    localStorage.sitename = a;
                     
                     document.getElementById("yue").innerHTML=("米币余额 : "+ a);
                     alert("保存成功！")
