@@ -138,6 +138,8 @@
             top:10px;
         }
         #115G{
+            width:200px;
+            height:200px;
             border:1px solid black;
             padding:10px;
         }
@@ -198,27 +200,22 @@
     <script scr="jquery.js"></script>
     <script>
         //var Map=position map;
-        if(localStorage.getItem("key")=="undefined"){
-            let a = 0;
+        let a = localStorage.getItem("key");
+        if(a=="undefined"){
+            a=0;
         }
         else{
-            let a =Number(localStorage.getItem("key");
+            Number(a);
         }
         function restart(){
             a=0;
             document.getElementById("yue").innerHTML=("米币余额 : "+ a);
         }
         function password(){
-            var a=prompt("password")
-            if(a=="Miler0301"){
-                alert("welcome!")
-                document.getElementById("chong").style.display="block";
-                let x=Number(localStorage.getItem("key"));
-                document.getElementById("yue").innerHTML=("米币余额 : "+ x);
-            }
-            else{
-                document.getElementById("chong").style.display="none";
-            }
+            
+            let x=Number(localStorage.getItem("key"));
+            document.getElementById("yue").innerHTML=("米币余额 : "+ x);
+            
         }
         function M(){
             a+=1;
@@ -229,7 +226,7 @@
             var r=confirm("确定要保存吗？");
                 if (r==true)
                 {
-                    
+                    String(a)
                     localStorage.setItem("key",a);
                     alert("保存成功！")
                 }
