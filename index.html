@@ -201,14 +201,11 @@
     <script scr="jquery.js"></script>
     <script>
         //var Map=position map;
-        let a = localStorage.getItem("key");
+        let a = Number(localStorage.getItem("key"));
         let x=Number(localStorage.getItem("key"));
         document.getElementById("yue").innerHTML=("米币余额 : "+ x);
         if(a=="undefined"){
             a=0;
-        }
-        else{
-            Number(a);
         }
         function restart(){
             a=0;
